@@ -1,0 +1,5 @@
+1. Read in provided user information
+2. Read in permissions from JSON file
+3. Create new user and assign permissions
+4. Save user to user list
+  a. If first user, create user list

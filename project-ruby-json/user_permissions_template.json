@@ -1,0 +1,5 @@
+{
+  "accounts": "read",
+  "policies": "write",
+  "user": "write"
+}
