@@ -3,13 +3,34 @@
   <head>
     <title>AlphaBlog</title>
     <%= csrf_meta_tags %>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-    <%= render 'layouts/messages' %>
-    <%= yield %>
+    <%= render 'layouts/header' %>
+    <div class="container">
+      <%= render 'layouts/messages' %>
+      <div class="row">
+        <nav role="navigation" class="col-md-2">
+          <h4>Articles</h4>
+          <ul class="list-unstyled">
+            <li>Article 1</li>
+            <li>Article 1</li>
+            <li>Article 1</li>
+          </ul>
+        </nav>
+        <main class="offset-sm-1 col-md-6">
+          <%= yield %>
+        </main>
+        <aside class="offset-sm-1 col-md-2">
+          <p>Aside</p>
+          <p>to</p>
+          <p>the</p>
+          <p>side.</p>
+        </aside>
+      </div>
+    </div>
+    <%= render 'layouts/footer' %>
   </body>
 </html>
